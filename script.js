@@ -124,10 +124,7 @@ function initTextReveal() {
     const heroTitle = document.querySelector('.hero-title');
     if (!heroTitle) return;
     
-    // Add animate class first
-    heroTitle.classList.add('animate-text');
-    
-    // Split by lines (handling <br>)
+    // Split by lines (handling <br>) and wrap words
     const lines = heroTitle.innerHTML.split(/<br\s*\/?>/i);
     
     // Wrap each line's words
@@ -147,6 +144,9 @@ function initTextReveal() {
     
     // Rejoin with <br> tags
     heroTitle.innerHTML = wrappedLines.join('<br>');
+    
+    // Add animate class to trigger animations
+    heroTitle.classList.add('animate-text');
     
     // Set animation delays dynamically for each word - faster and more visible
     const wordElements = heroTitle.querySelectorAll('.word');
@@ -191,30 +191,10 @@ function initScrollTriggeredMessages() {
     observer.observe(botPreview);
 }
 
-// 7. Scroll Indicator
+// 7. Scroll Indicator - Disabled since page doesn't scroll
 function initScrollIndicator() {
-    // Create scroll indicator element
-    const scrollIndicator = document.createElement('div');
-    scrollIndicator.className = 'scroll-indicator';
-    scrollIndicator.innerHTML = `
-        <div class="scroll-indicator-text">Scroll</div>
-        <div class="scroll-indicator-arrow"></div>
-    `;
-    document.body.appendChild(scrollIndicator);
-    
-    // Hide on scroll
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            scrollIndicator.classList.add('hidden');
-        } else {
-            scrollIndicator.classList.remove('hidden');
-        }
-        
-        lastScroll = currentScroll;
-    }, { passive: true });
+    // Scroll indicator disabled - page doesn't have scrollable content
+    return;
 }
 
 // 8. Enhanced Message Hover (handled in CSS, but can add JS if needed)
