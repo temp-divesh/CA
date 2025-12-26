@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperCA | AI-Powered Learning for CA Students</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">PaperCA</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span class="status-text">BETA</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-main">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Your AI tutor<br>
+                        for CA exams
+                    </h1>
+                    <p class="hero-subtitle">
+                        Ask anything. Get instant, precise answers at the unit level.
+                    </p>
+                    <div class="hero-cta">
+                        <button id="signInButton" class="cta-button">
+                            <span>Join waitlist</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <p class="cta-note">Launching soon · Free access for early users</p>
+                    </div>
+                </div>
+
+                <!-- AI Bot Interface Preview -->
+                <div class="ai-bot-preview">
+                    <div class="bot-window">
+                        <div class="bot-header">
+                            <div class="bot-status">
+                                <div class="bot-avatar">
+                                    <div class="avatar-glow"></div>
+                                </div>
+                                <div class="bot-info">
+                                    <div class="bot-name">PaperCA AI</div>
+                                    <div class="bot-status-text">
+                                        <span class="status-indicator"></span>
+                                        Online
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bot-messages">
+                            <div class="message bot-message">
+                                <div class="message-content">
+                                    <div class="message-text">What CA topic can I help you with today?</div>
+                                </div>
+                            </div>
+                            <div class="message user-message">
+                                <div class="message-content">
+                                    <div class="message-text">Explain depreciation methods</div>
+                                </div>
+                            </div>
+                            <div class="message bot-message">
+                                <div class="message-content">
+                                    <div class="message-text">
+                                        There are three main methods: Straight-Line (equal annual amounts), Reducing Balance (percentage on reducing balance), and Units of Production (based on usage). Each impacts financial statements differently.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message user-message">
+                                <div class="message-content">
+                                    <div class="message-text">Show me a calculation</div>
+                                </div>
+                            </div>
+                            <div class="message bot-message typing">
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <span class="footer-prompt">&lt;</span>
+                        <span>PaperCA</span>
+                        <span class="footer-prompt">/&gt;</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="terms.html" class="footer-link">Terms</a>
+                        <span class="footer-separator">·</span>
+                        <a href="privacy.html" class="footer-link">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
+    <script type="module" src="firebase-auth.js"></script>
+</body>
+</html>
